@@ -7,6 +7,7 @@ class DataBaseConfiguration {
     public $user;
     public $pass;
     public $data;
+    public $drive;
 
     public function __construct() {
 
@@ -20,7 +21,9 @@ class DataBaseConfiguration {
             $this->user = null;
             $this->pass = null;
             $this->data = null;
-        } 
+        }
+
+        $this->drive = 'mysql:host=' . $this->host . ';dbname=' . $this->data;
     }
 }
 ?>
