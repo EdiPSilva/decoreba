@@ -1,5 +1,5 @@
 <?php
-include 'configs/DataBaseConfiguration.php';
+require_once 'configs/DataBaseConfiguration.php';
 
 class ConnectionDataBase {
     

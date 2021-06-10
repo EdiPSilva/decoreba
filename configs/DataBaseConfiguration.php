@@ -1,5 +1,5 @@
 <?php
-include 'configs/DetectEnvironment.php';
+require_once 'configs/DetectEnvironment.php';
 
 class DataBaseConfiguration {
     
