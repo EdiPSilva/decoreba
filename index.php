@@ -1,5 +1,14 @@
 <?php
-    include 'configs/ConnectionDataBase.php';
+    header("Content-Type: text/html; charset=utf-8");
+
+    require_once('configs/Config.php');
+    require_once(ROOTDIRECTORYSERVER. ROOTDIRECTORYAPP. '/ManagementController.php');
+
+    $mg = new ManagementController();
+    //echo '<pre>';
+    //var_dump($mg);
+
+    /*include 'configs/ConnectionDataBase.php';
 
     $connection = ConnectionDataBase::newConnection();
 
@@ -10,6 +19,6 @@
         echo '<pre>';
         print_r($result);
         echo '</pre>';
-    }
+    }*/
     
 ?>

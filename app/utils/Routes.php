@@ -20,6 +20,7 @@ class Routes {
         $this->rota = array(
             "" => "Home",
             "home" => "Home",
+            "palavras" => "Words",
         );
     }
 
@@ -33,7 +34,8 @@ class Routes {
 
     public function getControllerByRote() {
         if (array_key_exists($this->firstUrl, $this->rota)) {
-            if (file_exists(ROOTDIRECTORYSERVER . '/' . DIRECTORYCONTROLLERS . '/' .$this->rota[$this->firstUrl])) {
+            $dir = ROOTDIRECTORYSERVER.ROOTDIRECTORYAPP.DIRECTORYCONTROLLERS;
+            if (file_exists($dir.$this->rota[$this->firstUrl].'.php')) {
                 return $this->rota[$this->firstUrl];
             } else {
                 return "Home";

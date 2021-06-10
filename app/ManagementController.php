@@ -1,13 +1,12 @@
 <?php
 require_once('utils/Routes.php');
-require_once('controllers/Home.php');
 
 //require de todos os arquivos do diretório controllers
-/*$dir = __DIR__ . DIRECTORY_SEPARATOR.'controllers';
+$dir = __DIR__ . DIRECTORY_SEPARATOR.'controllers';
 $files = glob($dir . DIRECTORY_SEPARATOR . '*.php');
 foreach ($files as $file) {
     require_once($file);
-}*/
+}
 
 class ManagementController extends Routes {
 
@@ -23,9 +22,8 @@ class ManagementController extends Routes {
     //Método de adição de controller
     private function addController() {
         $controllerRoute = $this->getControllerByRote();
-        $controllerResult = DIRECTORYCONTROLLERS . $controllerRoute ;
-        echo $controllerResult;
-        $this->object = new $controllerResult;
+        //$controllerResult = DIRECTORYCONTROLLERS . $controllerRoute ;
+        $this->object = new $controllerRoute;
     }
 
     //Método de adição de método de controller
