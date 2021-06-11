@@ -1,19 +1,15 @@
 <?php
-require_once 'UrlParser.php';
+require_once('UrlParser.php');
 
-class Routes {
+class Routes extends UrlParser {
     private $rota;
     private $firstUrl;
 
     public function __construct() {
-        $urlParser = new UrlParser();
-        $url = $urlParser->parserUrl();
+        parent::__construct();//Chama o construto da classe em extends
+        $url = $this->parserUrl();
         $this->setFirstUrl($url[0]);
         $this->setRota();
-    }
-
-    private function getRota() {
-        return $this->rota;
     }
 
     private function setRota() {
@@ -24,10 +20,6 @@ class Routes {
         );
     }
 
-    private function getFirstUrl() {
-        return $this->firstUrl;
-    }
-
     private function setFirstUrl($value) {
         $this->firstUrl = $value;
     }
@@ -35,7 +27,8 @@ class Routes {
     public function getControllerByRote() {
         if (array_key_exists($this->firstUrl, $this->rota)) {
             $dir = ROOTDIRECTORYSERVER.ROOTDIRECTORYAPP.DIRECTORYCONTROLLERS;
-            if (file_exists($dir.$this->rota[$this->firstUrl].'.php')) {
+            $file = $dir . $this->rota[$this->firstUrl] . '.php';
+            if (file_exists($file)) {
                 return $this->rota[$this->firstUrl];
             } else {
                 return "Home";
