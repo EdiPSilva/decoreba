@@ -1,9 +1,10 @@
 <?php
-require_once 'configs/DataBaseConfiguration.php';
+require_once('configs/DataBaseConfiguration.php');
 
-class ConnectionDataBase {
-    
-    public static function newConnection() {
+class ConnectionDataBase
+{
+    public static function newConnection()
+    {
         $conn = null;
         try {
             $config = new DataBaseConfiguration();
@@ -17,7 +18,8 @@ class ConnectionDataBase {
         return $conn;
     }
 
-    public static function closeConnection($conn) {
+    public static function closeConnection($conn)
+    {
         $conn = null;
     }
 }
