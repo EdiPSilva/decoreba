@@ -1,7 +1,7 @@
 <?php
 require_once(REQUIRESUTILS.'Routes.php');
 
-class Words extends Routes
+class Configurations extends Routes
 {
     public function __construct()
     {
