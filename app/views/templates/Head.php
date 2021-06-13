@@ -7,5 +7,5 @@
     <meta name="author" content="Édi P Silva">
     <meta name="description" content="Site para estudo de inglês">
     <meta name="keywords" content="">
-    <title>Document</title>
+    <title><?= $this->getTile(); ?></title>
 </head>

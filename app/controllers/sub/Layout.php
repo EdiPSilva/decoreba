@@ -4,30 +4,48 @@ require_once('Header.php');
 require_once('Nav.php');
 require_once('Aside.php');
 require_once('Footer.php');
+require_once('Screen.php');
 
 class Layout {
 
-    private $contents;
     private $screen;
-
     private $head;
     private $header;
     private $nav;
     private $aside;
     private $footer;   
 
-    public function __construct() {
-        
+    public function __construct($screen = null) {
         $this->head = new Head();
         $this->header = new Header();
         $this->nav = new Nav();
         $this->aside = new Aside();
         $this->footer = new Footer();
 
-        //require_once(REQUIRESVIEWS.'templates/Template.php');
-        //require_once(REQUIRESVIEWS.'templates/Head.php');
-        //$this->header = new Header();
-        //require_once(REQUIRESVIEWS.'templates/Header.php');
+        if ($screen != null) {
+            $this->screen = new Screen($screen);
+        }
+    }
+
+    public function setTitle($value = null) {
+        $this->head->setTitle($value);
+    }
+
+    public function setContents($value) {
+        if ($this->screen != null) {
+            $this->screen->setContents($value);
+        }
+    }
+
+    public function show() {
+        $this->head->show();
+        $this->header->show();
+        $this->nav->show();
+        if ($this->screen != null) {
+            $this->screen->show();
+        }
+        $this->aside->show();
+        $this->footer->show();
     }
 }
 ?>
