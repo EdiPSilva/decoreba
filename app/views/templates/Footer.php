@@ -1,6 +1,7 @@
-    </main>
-    <footer>
-        <p>footer</p>
-    </footer>
+<footer>
+    <small><?= $this->getDescription(); ?></small>
+</footer>
+</div>
 </body>
+
 </html>

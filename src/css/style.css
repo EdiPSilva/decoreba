@@ -1,5 +1,121 @@
-* {
+*, html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background-color: #DDD;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 8vh 80vh 10vh;
+    grid-template-areas: "n h h h h h" "n m m m m a" ". f f f f f";
+    grid-gap: 10px;
+}
+
+header {
+    background-color: #FB8500;
+    grid-area: h;
+    border-radius: 0 0 0 15px;
+}
+
+nav {
+    background-color: #023047;
+    grid-area: n;
+    border-radius: 0 0 15px 0;
+}
+
+main {
+    background-color: white;
+    grid-area: m;
+    /*border: 10px solid #DDD;*/
+    border-radius: 15px;
+}
+
+aside {
+    background-color: #8ecae6;
+    grid-area: a;
+    border-radius: 15px 0 0 15px;
+}
+
+footer {
+    background-color: #FFB703;
+    grid-area: f;
+    border-radius: 15px 0 0 0;
+}
+
+header, main, aside, footer {
+    padding: 10px;
+}
+
+/* Header */
+header .containerHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+header .containerHeader div {
+    color: #523c22;
+}
+
+header .containerHeader div:first-child {
+    max-width: 15em;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 0.5px solid #d27409;
+}
+
+header .containerHeader div:last-child {
+    max-width: 15em;
+}
+/* Header */
+
+/* Nav */
+nav .containerNav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+nav .containerNav .logo{
+    background-color: #012131;
+    color: #FFF;
+    flex: 1;
+    margin-bottom: 2.5em;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+nav .containerNav .menu{
+    color: #219EBC;
+    flex: 1;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    font-size: 1em;
+    padding: 5px;
+    border-bottom: 3px solid #023047;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 0 0 0 0;
+    cursor: pointer;
+}
+
+nav .containerNav .menu.active {
+    border-bottom: 3px solid #219EBC;
+    border-radius: 0 0 10px 0;
+    color: #FFF;
+}
+
+nav .containerNav .menu:hover {
+    border-bottom: 3px solid #219EBC;
+    border-radius: 0 0 10px 0;
+    color: #FFF;
+}
+/* Nav */

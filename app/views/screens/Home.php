@@ -1,3 +1,3 @@
-    <article>
+    <main>
         <p><?= $this->getContents(); ?></p>
-    </article>
+    </main>
