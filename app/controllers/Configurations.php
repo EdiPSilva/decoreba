@@ -1,12 +1,18 @@
 <?php
 require_once(REQUIRESUTILS.'Routes.php');
 
-class Configurations extends Routes
-{
-    public function __construct()
-    {
-        parent::__construct();//Chama o construto da classe em extends
-        echo $this->getControllerByRote();
+class Configurations extends Routes {
+
+    private $screen = 'Configurations';
+    private $layout;
+
+    public function __construct() {
+        parent::__construct(); //Chama o construto da classe em extends
+
+        $this->layout = new Layout($this->screen);
+        $this->layout->setTitle($this->screen);
+        $this->layout->setContents($this->screen);
+        $this->layout->show();
     }
 
     private function findByPage($currentPage, $limitPage)

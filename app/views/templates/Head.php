@@ -8,7 +8,8 @@
     <meta name="author" content="<?= AUTHOR ?>">
     <meta name="description" content="<?= DESCRIPTION ?>">
     <meta name="keywords" content="">
-    <title><?= $this->getTile(); ?></title>
+    <title><?= PROJETO . $this->getTile(); ?></title>
 
-    <link rel="stylesheet" type="text/css" href="<?= LINKCSS?>">
+    <link rel="stylesheet" type="text/css" href="<?= LINKCSS . '/font-awesome.min.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= LINKCSS . '/style.css' ?>">
 </head>

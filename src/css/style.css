@@ -1,3 +1,23 @@
+@font-face{
+    font-family: "fontawesome";
+    src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fontawesome-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+:root {
+    --backgroud-base: #DDD;
+    --backgroud-header: #FB8500;
+    --backgroud-nav: #023047;
+    --backgroug-main: #FFFFFF;
+    --backgroud-aside: #8ecae6;
+    --backgroud-footer: #FFB703;
+    --color-font-header: #523c22;
+}
+
 *, html, body {
     margin: 0;
     padding: 0;
@@ -6,44 +26,44 @@
 }
 
 body {
-    background-color: #DDD;
+    background-color: var(--backgroud-base);
+    overflow: hidden;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 8vh 80vh 10vh;
-    grid-template-areas: "n h h h h h" "n m m m m a" ". f f f f f";
+    grid-template-areas: "n h h h h h h h" "n m m m m m m a" ". f f f f f f f";
     grid-gap: 10px;
 }
 
 header {
-    background-color: #FB8500;
+    background-color: var(--backgroud-header);
     grid-area: h;
     border-radius: 0 0 0 15px;
 }
 
 nav {
-    background-color: #023047;
+    background-color: var(--backgroud-nav);
     grid-area: n;
     border-radius: 0 0 15px 0;
 }
 
 main {
-    background-color: white;
+    background-color: var(--backgroug-main);
     grid-area: m;
-    /*border: 10px solid #DDD;*/
     border-radius: 15px;
 }
 
 aside {
-    background-color: #8ecae6;
+    background-color: var(--backgroud-aside);
     grid-area: a;
     border-radius: 15px 0 0 15px;
 }
 
 footer {
-    background-color: #FFB703;
+    background-color: var(--backgroud-footer);
     grid-area: f;
     border-radius: 15px 0 0 0;
 }
@@ -60,7 +80,7 @@ header .containerHeader {
 }
 
 header .containerHeader div {
-    color: #523c22;
+    color: var(--color-font-header);
 }
 
 header .containerHeader div:first-child {
@@ -82,7 +102,7 @@ nav .containerNav {
     text-align: left;
 }
 
-nav .containerNav .logo{
+nav .containerNav .logo {
     background-color: #012131;
     color: #FFF;
     flex: 1;
@@ -99,23 +119,33 @@ nav .containerNav .menu{
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     font-size: 1em;
-    padding: 5px;
-    border-bottom: 3px solid #023047;
+    padding: 10px 5px;
+    border-bottom: 1px solid #023047;
     margin-right: 10px;
     margin-left: 10px;
-    border-radius: 0 0 0 0;
+    border-radius: 5px;
     cursor: pointer;
 }
 
+nav .containerNav .menu.active a {
+    color: #FFF;
+}
+
 nav .containerNav .menu.active {
-    border-bottom: 3px solid #219EBC;
-    border-radius: 0 0 10px 0;
+    background-color: #003b58;
+    border-bottom: 1px solid #219EBC;
     color: #FFF;
 }
 
 nav .containerNav .menu:hover {
-    border-bottom: 3px solid #219EBC;
-    border-radius: 0 0 10px 0;
-    color: #FFF;
+    background-color: #003b58;
+    border-bottom: 1px solid #219EBC;
+}
+
+nav .containerNav .menu a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #219EBC;
 }
 /* Nav */

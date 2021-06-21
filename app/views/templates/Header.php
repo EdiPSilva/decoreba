@@ -3,6 +3,6 @@
         <header>
             <div class="containerHeader">
                 <div><span>Olá <strong>Usuário</strong></span></div>
-                <div>Sair</div>
+                <div><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Sair</div>
             </div>
         </header>

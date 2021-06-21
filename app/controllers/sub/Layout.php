@@ -24,6 +24,7 @@ class Layout {
 
         if ($screen != null) {
             $this->screen = new Screen($screen);
+            $this->nav->setScreen($screen);
         }
     }
 

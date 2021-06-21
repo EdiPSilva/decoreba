@@ -6,6 +6,8 @@ define("DESCRIPTION", "Site para estudo de inglês");
 //pasta raiz por url
 $applicationFolder = "app" . DIRECTORY_SEPARATOR;
 define("ROOTDIRECTORYAPP", "app". DIRECTORY_SEPARATOR);
+define("PROJETO", "DECOREBA | ");
+
 define("ROOTDIRECTORYURL", "{$_SERVER['HTTP_HOST']}/{$applicationFolder}");
 //pasta raiz relativa ao server
 $rootDirectory = "decoreba";
@@ -31,7 +33,10 @@ define("REQUIRESVIEWS", ROOTDIRECTORYSERVER . ROOTDIRECTORYAPP . DIRECTORYVIEWS)
 
 //SRC
 
-define("DIRSRC",  "{$_SERVER['REQUEST_URI']}/src");
-define("LINKCSS",  DIRSRC. "/css/style.css");
+define("DIRSRC",  "http://{$_SERVER['SERVER_NAME']}/decoreba/src");
+define("LINKCSS",  DIRSRC. "/css");
+define("LINKFONTS",  DIRSRC . "/fonts");
+
+define("URL", "http://{$_SERVER['SERVER_NAME']}/decoreba/");
 
 ?>

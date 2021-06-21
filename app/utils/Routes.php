@@ -17,6 +17,9 @@ class Routes extends UrlParser {
             "" => "Home",
             "home" => "Home",
             "palavras" => "Words",
+            "praticar" => "Practice",
+            "usuario" => "Users",
+            "configuracao" => "Configurations",
         );
     }
 

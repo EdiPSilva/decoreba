@@ -16,7 +16,11 @@ class Screen {
     }
 
     public function show() {
-        require_once(REQUIRESVIEWS . "screens/{$this->screen}.php");
+        if (file_exists(REQUIRESVIEWS . "screens/{$this->screen}.php")) {
+            require_once(REQUIRESVIEWS . "screens/{$this->screen}.php");
+        } else {
+            require_once(REQUIRESVIEWS . "screens/404.php");
+        }
     }
 }
 ?>

@@ -8,21 +8,18 @@ foreach ($files as $file) {
     require_once($file);
 }
 
-class ManagementController extends Routes
-{
+class ManagementController extends Routes {
     private $methodo;
     private $parameters = [];
     private $object;
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();//Chama o construto da classe em extends
         $this->addController();
     }
 
     //Método de adição de controller
-    private function addController()
-    {
+    private function addController() {
         $controllerRoute = $this->getControllerByRote();
         $this->object = new $controllerRoute;
     }
