@@ -36,6 +36,7 @@ define("REQUIRESVIEWS", ROOTDIRECTORYSERVER . ROOTDIRECTORYAPP . DIRECTORYVIEWS)
 define("DIRSRC",  "http://{$_SERVER['SERVER_NAME']}/decoreba/src");
 define("LINKCSS",  DIRSRC. "/css");
 define("LINKFONTS",  DIRSRC . "/fonts");
+define("LINKJS",  DIRSRC . "/js");
 
 define("URL", "http://{$_SERVER['SERVER_NAME']}/decoreba/");
 

@@ -1,8 +1,8 @@
 <?php 
 
-
 class Footer {
 
+    private $screen;
     private $description;
 
     public function __construct($value = null) {
@@ -18,6 +18,14 @@ class Footer {
 
     public function getDescription() {
         return $this->description;
+    }
+
+    public function setScreen($value) {
+        $this->screen = $value;
+    }
+
+    public function getScreen() {
+        return $this->screen;
     }
 
     public function show() {
